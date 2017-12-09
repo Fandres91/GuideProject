@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8"/>
+	<title>Guide Project </title>
+	<!--la etiqueta meta se utiliza para agregar información a la página-->
+	<!--el meta charset detemina como se verán ciertos caracateres -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="keywords" content="multi-level menu, mobile menu, responsive, space-saving, drop-down menu, css, jquery" />
+	<meta name="description"content="En esta secci&oacute;n se encuentran los aspectos preliminares de un proyecto de investigaci&acute;on"/>
+	<meta name="viewport" content="width=device-width,initial-scale=1"/><!-- meta especifica. el viewport sirve para que el dispositivo que este visualizando el sitio web lo veo según el ancho del dispositivo -->
+	<link rel="shortcut icon" type="image/x-icon" href="faviconGp.ico"/>
+	<link rcl="author" type="text/plain" href="humans.txt"/>
+	<!-- se recomienda que los plug-in esten antes de cargar la libreria de css-->
+	<link rel="sitemap" type="aplication/xml"title="sitemap" href="sitemap.xml"/>
+	<link rel="stylesheet" type="text/css" href="css/estilos.css"/>
+	<!--pertenece al menú-->
+	<link rel="stylesheet" type="text/css" href="css/default.css" />
+	<link rel="stylesheet" type="text/css" href="css/component.css" />
+	<link rel="stylesheet" href="css/jquery.fancybox.css"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js">
+	</script>
+	<script>
+		!window.Jquery && document.write("<script src='js/jquery.min.js'><\/script>");
+	</script>
+	<script src="js/jquery.flexslider.js"></script>
+	<!-- este script ejecuta el flexslider, se crea un objeto window. este analiza hasta que window a cargado y ejecuta la función-->
+	<!-- $('.flexslider').flexslider(); los puntos indican que es una clase de html por eso .flexslider..este comando busca en el elemento que tenga la clase flexslider que en este caso es <div>de flexslider y ejecuta el metódo -->
+	<script>
+		$(window).on("load",function() {
+			
+			$('.flexslider').flexslider();
+		});
+	</script>
+</head>
+<body>
+<!-- Navigation -->
+  <section id="navigation" class="navbar-fixed-top ">
+    <div class="menu-position">
+      <div class="nav-logo"> 
+        <a href="index.php" class="logo">
+          <img src="img/Titulo.png" class=" rotarY"id="maximizar"alt="logo">
+        </a>
+      </div>
+
+      <a class="mini-nav-button"><i class="nav-fa fa fa-bars"></i></a>
+
+      <div class="nav-menu"> 
+    <nav id="menu-principal"><!--es una etiqueta de menú de navegación, o conjunto de enlaces a otras páginas-->
+<ul>
+	<li class="active"><a href="index.php"class="active">Inicio</a><li/>
+	<li><a href="servicio.html">Proyecto </a><li/>
+	<li><a href="icontec.html">Icontec</a><li/>
+	<li><a href="contacto.html">Contacto</a><li/>	
+
+</ul>
+	</nav>	
+      </div>
+    </div>
+  </section>
+<!--la etiqueta section permite trabajar por secciones, es decir por bloques donde se puede colocar un título diferente a cada seccción -->
+	<section id="contenido">
+		<!--acá se agrega un contenedor que va a contener todo lo de los servios a su ves dentro de este contenedor se agregara otro-->
+		<section id="servicios-principal">
+			<br/>
+	<article id="nuestros-servicios">
+		<h3>NORMAS ICONTEC</h3>
+		<img class="img-advertencia"src="img/icontec.png"><p>En esta norma se consideran los requisitos para la presentación de un trabajo escrito, con el fin de orientar al estudiante, docente e investigador en su elaboración. No se enfatiza en los aspectos metodológicos de la investigación, sino en los aspectos formales de presentación <a href="http://normas-icontec.com/" target="_blank"><cite>(Normas Icontec,2015)</cite></a></p>
+	</article>
+			<p id="comentario">Para mas información dar <b>click</b> sobre el título de la imagen</p>
+		</section>
+		<section id="servicios-tipos">
+			<article id="servicio1-icontec">	
+				<b><a href="#" class="alternar-respuesta">Cubierta</a></b>
+				<p class="respuesta" style="display:none"> Cubierta. Presenta los siguientes elementos: título del trabajo, nombre (s) del (de los) autor (es), institución (universidad, colegio, escuela u otro), facultad, departamento, división, sección o área que representa el autor del trabajo, según el orden jerárquico interno de la entidad, ciudad y año.</p>
+			</br>
+				<article>
+				
+					<a rel="trabajos"class="fade" href="img/cubierta.png"title="Cubierta">	
+					<img src="img/cubierta-mini.png">
+					</a>
+				</article>
+
+			</article>
+			<article id="servicio1-icontec">	
+				<b><a href="#" class="alternar-respuesta">Portada</a></b>
+				<p class="respuesta" style="display:none"> Página informativa del documento que, además de los elementos de la cubierta; incluye la clase de trabajo realizado (tesis, monografía, trabajo, informe u otro) y el nombre con el título académico o cargo de quien lo dirigió, precedido de la palabra escrita con mayúscula inicial: director, presidente, asesor o profesor, según el caso.</p>
+			</br>
+
+				<article>
+				
+					<a rel="trabajos"class="fade" href="img/portada.png"title="Ejemplo 1">	
+					<img src="img/portada-mini.png">
+					</a>
+				</article>
+
+			</article>
+			<article id="servicio1-icontec">	
+				<b><a href="#" class="alternar-respuesta">Página Aceptación</a></b>
+				<p class="respuesta" style="display:none"> Contiene las firmas del presidente o director y de los jurados que participan en la revisión, sustentación y aprobación del trabajo. Adicionalmente, incluye la ciudad y la fecha de entrega (día, mes, año), conservando los márgenes establecidos.</p>
+
+				<article>
+				
+					<a rel="trabajos"class="fade" href="img/aceptacion.png"title="Ejemplo 1">	
+					<img src="img/aceptacion-mini.png">
+					</a>
+				</article>
+
+			</article>
+			<article id="servicio1-icontec">	
+				<b><a href="#" class="alternar-respuesta">Dedicatoria</a></b>
+				<p class="respuesta" style="display:none"> Nota mediante la cual el autor ofrece su trabajo, en forma especial, a personas o entidades. Su presentación es opcional y debe conservar los márgenes.</p>
+
+				<article>
+				
+					<a rel="trabajos"class="fade" href="img/dedicatoria.png"title="Ejemplo 1">	
+					<img src="img/dedicatoria-mini.png">
+					</a>
+				</article>
+
+			</article>
+			<article id="servicio1-icontec">	
+				<b><a href="#" class="alternar-respuesta">Agradecimientos</a></b>
+				<p class="respuesta" style="display:none"> En ella el (los) autor (es) expresa (n) el reconocimiento hacia las personas y entidades que asesoraron técnicamente, suministraron datos, financiaron total o parcialmente la investigación o contribuyeron significativamente al desarrollo del tema. Es opcional y debe contener, además de la nota correspondiente, los nombres de las personas con sus respectivos cargos y los nombres completos de las instituciones y su aporte al trabajo.</p>
+
+				<article>
+				
+					<a rel="trabajos"class="fade" href="img/agradecimiento.png"title="Ejemplo 1">	
+					<img src="img/agradecimiento-mini.png">
+					</a>
+				</article>
+
+			</article>
+			<article id="servicio1-icontec">	
+				<b><a href="#" class="alternar-respuesta">Contenido</a></b>
+				<p class="respuesta" style="display:none"> En esta página se enuncian los títulos de primero, segundo, tercer y cuarto nivel y la relación de los materiales complementarios del trabajo, en el mismo orden en que aparecen y los números de las páginas donde se encuentran. Se escribe la palabra contenido en mayúscula sostenida, centrado a 3 cm del borde superior de la hoja. Los títulos relacionados en el contenido no llevan punto final.</p>
+
+				<article>
+				
+					<a rel="trabajos"class="fade" href="img/contenido.png"title="Ejemplo 1">	
+					<img src="img/contenido-mini.png">
+					</a>
+				</article>
+
+			</article>
+			<article id="servicio1-icontec">	
+				<b><a href="#" class="alternar-respuesta">Listas especiales</a></b>
+				<p class="respuesta" style="display:none">En las listas especiales se relacionan los títulos de las ilustraciones, tales como tablas, cuadros, símbolos, signos, abreviaturas, anexos y otros elementos similares que forman parte del trabajo. El título de la lista especial se escribe centrado, en mayúscula sostenida, a 3 cm del borde superior de la hoja.</p>
+
+				<article>
+				
+					<a rel="trabajos"class="fade" href="img/listatablas.png"title="Ejemplo 1">	
+					<img src="img/listatablas-mini.png">
+					</a>
+				</article>
+
+			</article>
+			<article id="servicio1-icontec">	
+				<b><a href="#" class="alternar-respuesta">Anexos</a></b>
+				<p class="respuesta" style="display:none">En las listas especiales se relacionan los títulos de las ilustraciones, tales como tablas, cuadros, símbolos, signos, abreviaturas, anexos y otros elementos similares que forman parte del trabajo. El título de la lista especial se escribe centrado, en mayúscula sostenida, a 3 cm del borde superior de la hoja.</p>
+
+				<article>
+				
+					<a rel="trabajos"class="fade" href="img/anexos.png"title="Ejemplo 1">	
+					<img src="img/anexos-mini.png">
+					</a>
+				</article>
+
+			</article>
+			<article id="servicio1-icontec">	
+				<b><a href="#" class="alternar-respuesta">Glosario</a></b>
+				<p class="respuesta" style="display:none">Lista alfabética de términos y sus definiciones o explicaciones necesarios para la comprensión del documento. La existencia de un glosario no justifica la omisión de una explicación en el texto la primera vez que aparece un término. El título glosario se escribe en mayúscula sostenida, centrado, a 3 cm del borde superior de la hoja.</p>
+
+				<article>
+				
+					<a rel="trabajos"class="fade" href="img/glosario.png"title="Ejemplo 1">	
+					<img src="img/glosario-mini.png">
+					</a>
+				</article>
+
+			</article>
+			<article id="servicio1-icontec">	
+				<b><a href="#" class="alternar-respuesta">Introducción</a></b>
+				<p class="respuesta" style="display:none">En ella, el autor presenta y señala la importancia, el origen (los antecedentes teóricos y prácticos), los objetivos, los alcances, las limitaciones, la metodología empleada, el significado que el estudio tiene en el avance del campo respectivo y su aplicación en el área investigada.</p>
+
+				<article>
+				
+					<a rel="trabajos"class="fade" href="img/introduccion.png"title="Ejemplo 1">	
+					<img src="img/introduccion-mini.png">
+					</a>
+				</article>
+
+			</article>
+			<article id="servicio1-icontec">	
+				<b><a href="#" class="alternar-respuesta">Conclusiones</a></b>
+				<p class="respuesta" style="display:none">Constituyen un capítulo independiente y presentan, en forma lógica, los resultados del trabajo. Las conclusiones deben ser la respuesta a los objetivos o propósitos planteados.</p>
+
+				<article>
+				
+					<a rel="trabajos"class="fade" href="img/conclusiones.png"title="Ejemplo 1">	
+					<img src="img/conclusiones-mini.png">
+					</a>
+				</article>
+
+			</article>
+			<article id="servicio1-icontec">	
+				 <b><a href="#" class="alternar-respuesta">Bibliografía</a></b>
+				<p class="respuesta" style="display:none">Relación alfabética de las fuentes documentales que no se han utilizado en el trabajo, pero pueden servir de apoyo a otras investigaciones. Se le debe dar el mismo tratamiento que a la bibliografía.</p>
+				<article>
+				
+					<a rel="trabajos"class="fade" href="img/biografia.png"title="Ejemplo 1">	
+					<img src="img/biografia-mini.png">
+					</a>
+				</article>
+
+			</article>
+
+	</section>
+
+	</section>
+		
+
+<script src="js/modernizr.custom.js"></script>
+	<!--Se invoca desde los servidores de google la librería de Jquery, por eso solo funciona con internet -->
+	
+	  <script type="text/javascript" src="js/n/bootstrap.min.js"></script>
+    
+    <script type="text/javascript" src="js/n/plugins.js"></script>
+
+		<script src="js/jquery.dlmenu.js"></script>
+		<script>
+			$(function() {
+				$( '#dl-menu' ).dlmenu({
+					animationClasses : { classin : 'dl-animate-in-3', classout : 'dl-animate-out-3' }
+				});
+			});
+		</script>
+
+		<script async type="text/javascript">
+				$(document).ready(function(){
+					$("#animacion").hide("slow");
+					$("#animacion").show(1200, function(){
+					//$("#animacion").css("color", "#990000");
+												      });
+											});
+		</script>
+		<!--Animación del menu pequeño de enlace; editor; descarga..-->
+			<script type='text/javascript'>
+				// <![CDATA[
+				$(document).ready(function() {
+				$('a.nudge').hover(function() { //mouse in
+				$(this).animate({ paddingLeft: '45px' }, 400);
+				}, function() { //mouse out
+				$(this).animate({ paddingLeft: '1px' }, 400);
+				});
+				});
+				//]]>
+			</script>
+
+			<!--iframe fancybox-->
+	<script src="js/jquery.fancybox.js"></script>
+	<script src="js/jquery.mousewheel-3.0.6.pack.js"></script>
+			<!--iframe fancybox-->
+	<script>
+	/*Al documento le voy a prender el evento ready*/
+		$(document).on("ready",function(){
+			/*cunado se inicia con $ es por que es jquery*/
+			$(".fade").fancybox();
+		});
+	</script>		
+	<script>
+	$(document).ready(function(){
+    $(".ifancybox").fancybox({
+         'width' : '75%',
+         'height' : '75%',
+         'autoScale' : false,
+         'transitionIn' : 'none',
+         'transitionOut' : 'none',
+         'type' : 'iframe'
+     });
+ 		});</script>
+	<script>
+	// jQuery
+    $(document).ready(function(){ 
+        $('.alternar-respuesta').on('click',function(e){
+            $(this).parent().next().toggle();
+            e.preventDefault();
+        });
+        $('#alternar-todo').on('click',function(e){
+            $('.respuesta').toggle('slow');
+            e.preventDefault();
+        });
+    });
+	</script>
+
+</body>
+<html/>
+
+
